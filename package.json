@@ -1,0 +1,25 @@
+{
+  "name": "react-totopbutton",
+  "version": "1.0.0",
+  "description": "Click this button to roll back to the top of the page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mytac/react-toTopButton.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "mytac",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mytac/react-toTopButton/issues"
+  },
+  "homepage": "https://github.com/mytac/react-toTopButton#readme",
+  "dependencies": {
+    "react": "^15.6.1"
+  }
+}
