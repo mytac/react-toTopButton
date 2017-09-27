@@ -1,6 +1,6 @@
 {
   "name": "react-totopbutton",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Click this button to roll back to the top of the page",
   "main": "index.js",
   "scripts": {
