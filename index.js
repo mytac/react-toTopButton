@@ -7,10 +7,11 @@ const toTop = () => {
     const speed = osTop / 200;
     const timer = setInterval(() => {
         document.documentElement.scrollTop -= 40 + speed;
-    document.body.scrollTop -= 40 + speed;
-    if (document.body.scrollTop < 1) {
-        clearInterval(timer);
-    }
+        document.body.scrollTop -= 40 + speed;
+        if (document.documentElement.scrollTop < 1 ||
+            (document.body.scrollTop > 0 && document.body.scrollTop < 1)) {
+            clearInterval(timer);
+        }
 }, 10);
 };
 
