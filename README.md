@@ -11,7 +11,7 @@ npm install react-totopbutton --save
 ```js
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ToTopButton = require('react-toTopButton');
+var ToTopButton = require('react-totopbutton');
 
 ReactDOM.render(
     <ToTopButton/>,
