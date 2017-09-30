@@ -3,12 +3,12 @@ import './style.less';
 
 // 定位到头部
 const toTop = () => {
-    const osTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const osTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
     const speed = osTop / 200;
     const timer = setInterval(() => {
         document.documentElement.scrollTop -= 40 + speed;
         document.body.scrollTop -= 40 + speed;
-        if (document.documentElement.scrollTop < 1 ||
+        if ((document.documentElement.scrollTop > 0 && document.documentElement.scrollTop < 1 )||
             (document.body.scrollTop > 0 && document.body.scrollTop < 1)) {
             clearInterval(timer);
         }
