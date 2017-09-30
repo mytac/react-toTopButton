@@ -2,16 +2,16 @@ import React from 'react';
 
 // 定位到头部
 const toTop = () => {
-    const osTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+    const osTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
     const speed = osTop / 200;
     const timer = setInterval(() => {
         document.documentElement.scrollTop -= 40 + speed;
         document.body.scrollTop -= 40 + speed;
-        if ((document.documentElement.scrollTop > 0 && document.documentElement.scrollTop < 1 )||
-            (document.body.scrollTop > 0 && document.body.scrollTop < 1)) {
+        if ((document.documentElement.scrollTop === 0) ||
+            (document.body.scrollTop > 0 && document.body.scrollTop < 50)) {
             clearInterval(timer);
         }
-}, 10);
+    }, 10);
 };
 
 export default class ToTopButton extends React.Component {
@@ -49,11 +49,12 @@ export default class ToTopButton extends React.Component {
                 className="to-top-button"
                 ref={(pos) => { this.focusTextInput = pos; }}
                 style={{ display: !this.state.isShow && 'none' }}
-                onClick={() => toTop()}>
+                onClick={() => toTop()}
+            >
 
-                <i className="fa fa-chevron-up"/>
+                <i className="fa fa-chevron-up" />
 
             </div>
-    );
+        );
     }
 }
