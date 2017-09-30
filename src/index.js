@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.less';
 
 // 定位到头部
 const toTop = () => {
